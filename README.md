@@ -28,6 +28,13 @@ python scripts/train.py --dinov3-model-dir <dir> --output-dir <dir>         # pa
 
 ## Kaggle
 
-1. Upload `src/` and `scripts/` as the dataset `sc4000-src`.
-2. Add the secret `HF_TOKEN` (access to the gated `facebook/dinov3-vitb16-pretrain-lvd1689m`) and run `kaggle/training` (internet on). Its output holds the DINOv3 snapshot, transformers wheels, ALIKED/LightGlue weights and `pair_classifier/pair_classifier_head_dinov3.pt`.
-3. Run `kaggle/inference` (internet off). It mounts the training output via `kernel_sources` and writes `/kaggle/working/submission.csv`.
+The notebooks embed `src/` and `scripts/` as `%%writefile` cells, so no code dataset is needed. Regenerate them after every code change; never edit the `.ipynb` files by hand:
+
+```bash
+python kaggle/build_notebooks.py
+kaggle kernels push -p kaggle/training
+kaggle kernels push -p kaggle/inference   # only after sc4000-training has a finished version
+```
+
+1. `sc4000-training` (internet on): attach the secret `HF_TOKEN` (access to the gated `facebook/dinov3-vitb16-pretrain-lvd1689m`). Its output holds the DINOv3 snapshot, transformers wheels, ALIKED/LightGlue weights and `pair_classifier/pair_classifier_head_dinov3.pt`.
+2. `sc4000-inference` (internet off): mounts the training output via `kernel_sources` and writes `/kaggle/working/submission.csv`. Kaggle only accepts that kernel source once the training kernel has completed a run.
