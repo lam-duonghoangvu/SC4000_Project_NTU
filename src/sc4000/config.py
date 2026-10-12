@@ -30,7 +30,7 @@ class PipelineConfig:
 
     # ---------------------------------------------------------------- step 2: outlier removal and pair selection
     pair_similarity_threshold: float = 0.5
-    min_neighbor_count_for_inlier: int = 10
+    min_neighbor_count_for_inlier: int = 2
     lightglue_pair_top_k: int = 10
 
     # ---------------------------------------------------------------- step 3: absolute rotation from pairwise rotations
