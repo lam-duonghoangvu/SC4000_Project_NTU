@@ -12,6 +12,9 @@ wheels/
 # Data
 data/
 
+# Secrets (HF_TOKEN etc.)
+.env
+
 # Local pipeline results
 result/
 submission*.csv
