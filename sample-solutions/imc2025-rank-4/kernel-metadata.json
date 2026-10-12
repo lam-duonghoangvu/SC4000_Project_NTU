@@ -1,0 +1,32 @@
+{
+  "id": "dhvlam/sc4000-imc2025-rank-4-replicate",
+  "title": "sc4000-imc2025-rank-4-replicate",
+  "code_file": "main.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "oldufo/imc2024-packages-lightglue-rerun-kornia",
+    "xtcpete/imc2025-deps",
+    "eduardtrulls/imc25-utils",
+    "xtcpete/kaggle-classifier"
+  ],
+  "kernel_sources": [
+    "motono0223/pkg-check-orientation"
+  ],
+  "competition_sources": [
+    "image-matching-challenge-2025"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/base/1",
+    "xtcpete/hloc-with-rdd/PyTorch/default/22",
+    "xtcpete/netvlad/Other/default/1",
+    "xtcpete/resnet60/PyTorch/default/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:d8674e13fab653bf7fb8d9a102f2ae94036771ccb5c73f51888d881421e1f937",
+  "machine_shape": "NvidiaTeslaT4"
+}
