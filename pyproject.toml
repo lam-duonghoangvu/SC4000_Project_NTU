@@ -7,7 +7,20 @@ authors = [
     { name = "lam.duonghoangvu", email = "lamthedev@proton.me" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+# Runtime is Kaggle (Python 3.10, pycolmap 0.6.1 from imc2024-packages-lightglue-rerun-kornia);
+# these are listed for local editing, linting and CPU smoke tests.
+dependencies = [
+    "h5py",
+    "networkx",
+    "numpy",
+    "pandas",
+    "pillow",
+    "pycolmap",
+    "torch",
+    "tqdm",
+    "transformers>=4.56",
+    "lightglue @ git+https://github.com/cvg/LightGlue.git",
+]
 
 [project.scripts]
 sc4000 = "sc4000:main"

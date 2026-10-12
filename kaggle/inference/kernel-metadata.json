@@ -1,0 +1,25 @@
+{
+  "id": "dhvlam/sc4000-inference",
+  "title": "sc4000-inference",
+  "code_file": "inference.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "competition_sources": [
+    "image-matching-challenge-2025"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:d8674e13fab653bf7fb8d9a102f2ae94036771ccb5c73f51888d881421e1f937",
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": false,
+  "dataset_sources": [
+    "dhvlam/sc4000-src",
+    "oldufo/imc2024-packages-lightglue-rerun-kornia",
+    "eduardtrulls/imc25-utils"
+  ],
+  "kernel_sources": [
+    "dhvlam/sc4000-training"
+  ],
+  "model_sources": []
+}
